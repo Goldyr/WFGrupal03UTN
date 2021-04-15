@@ -13,34 +13,53 @@
             Localidades
         </h2>
             <div>
-                <p>Nombre de localidad:</p>
-                <asp:TextBox ID="txt_Localidad" runat="server" Width="15%"></asp:TextBox>
-                <asp:Button ID="btn_GuardarLocalidad" runat="server" Text="Guardar localidad" />
+                <p>Nombre de localidad:
+                <asp:TextBox ID="txt_Localidad" runat="server" Width="16%" ValidationGroup="Grupo1"></asp:TextBox>
+                &nbsp;
+                    <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txt_Localidad" ValidationGroup="Grupo1">Ingrese una localidad</asp:RequiredFieldValidator>
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btn_GuardarLocalidad" runat="server" Text="Guardar localidad" ValidationGroup="Grupo1" Width="131px" OnClick="btn_GuardarLocalidad_Click" />
             </div>
         <h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Usuarios
         </h2>
             <div>
-                <p>Nombre usuario:</p>
-                <asp:TextBox ID="txt_Usuario" runat="server"></asp:TextBox>
+                <p>Nombre usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txt_Usuario" runat="server" Width="137px"></asp:TextBox>
 
-                <p>Contrasena:</p>
-                <asp:TextBox ID="txt_Contra" runat="server"></asp:TextBox>
+                </p>
 
-                <p>Repetir contrasena:</p>
-                <asp:TextBox ID="txt_ContraRepetida" runat="server"></asp:TextBox>
+                <p>Contraseña:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="txt_Contra" runat="server" Width="134px"></asp:TextBox>
 
-                <p>Correo electronico:</p>
-                <asp:TextBox ID="txt_Correo" runat="server"></asp:TextBox>
+                </p>
 
-                <p>CP:</p>
-                <asp:TextBox ID="txt_CP" runat="server"></asp:TextBox>
+                <p>Repetir contraseña:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txt_ContraRepetida" runat="server" Width="137px"></asp:TextBox>
 
-                <p>Localidades:</p>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                </p>
+
+                <p>Correo electronico:&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="txt_Correo" runat="server" Width="134px"></asp:TextBox>
+
+                </p>
+
+                <p>CP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="txt_CP" runat="server" Width="136px"></asp:TextBox>
+
+                </p>
+
+                <p>Localidades:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="123px"></asp:DropDownList>
+
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <asp:Button ID="btn_GuardarUsuario" runat="server" Text="Guardar Usuario" />
-                <asp:Button ID="btn_Inicio" runat="server" Text="Ir a Inicio.aspx" />
+                <br />
+                <br />
+                <asp:Button ID="btn_Inicio" runat="server" Text="Ir a Inicio.aspx" OnClick="btn_Inicio_Click" />
+                <br />
+                <br />
             </div>
         </form>
     </body>

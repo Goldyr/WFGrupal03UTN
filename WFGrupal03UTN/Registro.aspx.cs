@@ -13,5 +13,15 @@ namespace WFGrupal03UTN
         {
 
         }
+
+        protected void btn_GuardarLocalidad_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btn_Inicio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Inicio.aspx");
+        }
     }
 }
