@@ -22,7 +22,6 @@
                 <asp:Button ID="btn_GuardarLocalidad" runat="server" Text="Guardar localidad" ValidationGroup="Grupo1" Width="131px" OnClick="btn_GuardarLocalidad_Click" />
             </div>
         <h2>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Usuarios
         </h2>
             <div>
@@ -31,16 +30,23 @@
                 </p>
 
                 <p>Contraseña:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txt_Contra" runat="server" Width="134px"></asp:TextBox>
+                <asp:TextBox ID="txt_Contra" runat="server" Width="134px" TextMode="Password"></asp:TextBox>
+
+                	<asp:RequiredFieldValidator ID="rfv_contra" runat="server" ControlToValidate="txt_Contra">Ingrese una contraseña</asp:RequiredFieldValidator>
 
                 </p>
 
-                <p>Repetir contraseña:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txt_ContraRepetida" runat="server" Width="137px"></asp:TextBox>
+                <p>Repetir contraseña:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txt_ContraRepetida" runat="server" Width="134px" TextMode="Password"></asp:TextBox>
+
+                	<asp:CompareValidator ID="cv_contra" runat="server" ControlToCompare="txt_Contra" ControlToValidate="txt_ContraRepetida">Las contraseñas no coinciden</asp:CompareValidator>
 
                 </p>
 
                 <p>Correo electronico:&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txt_Correo" runat="server" Width="134px"></asp:TextBox>
+
+                	<asp:RegularExpressionValidator ID="rev_email" runat="server" ControlToValidate="txt_Correo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Email invalido</asp:RegularExpressionValidator>
+					<asp:RequiredFieldValidator ID="rfv_email" runat="server" ControlToValidate="txt_Correo">Ingrese un email </asp:RequiredFieldValidator>
 
                 </p>
 
@@ -50,8 +56,6 @@
                 </p>
 
                 <p>Localidades:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="ddl_localidades" runat="server" Height="16px" Width="123px"></asp:DropDownList>
-
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ddl_localidades" ControlToValidate="txt_Localidad">asino man</asp:CompareValidator>
 
                 </p>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
