@@ -38,6 +38,7 @@
                  <p>Repetir contraseña: </p>
                  <asp:TextBox ID="txt_ContraRepetida" runat="server" Width="137px" TextMode="Password"></asp:TextBox>
                 <asp:CompareValidator ID="cv_contra" runat="server" ControlToCompare="txt_Contra" ControlToValidate="txt_ContraRepetida">Las contraseñas no coinciden</asp:CompareValidator>
+                 <asp:RequiredFieldValidator ID="rfv_ContraRepetida" runat="server" ControlToValidate="txt_ContraRepetida">Ingresar la contraseña nuevamente</asp:RequiredFieldValidator>
             </div>
                  <!-- EMAIL -->
             <div class="input-div">
@@ -52,10 +53,14 @@
              <div class="input-div">
                  <p>CP: </p>
                   <asp:TextBox ID="txt_CP" runat="server" Width="136px"></asp:TextBox>
+                 <asp:RangeValidator ID="rv_Cp" runat="server" ControlToValidate="txt_CP" MaximumValue="9999" MinimumValue="1000" Type="Integer">Ingresar CP de 4 digitos</asp:RangeValidator>
+                 <asp:RequiredFieldValidator ID="rfv_CP" runat="server" ControlToValidate="txt_CP">Ingresar un codigo postal</asp:RequiredFieldValidator>
              </div>
              <div class="input-div">
              <p>Localidades: </p> 
             <asp:DropDownList ID="ddl_localidades" runat="server" Height="16px" Width="123px"></asp:DropDownList>
+                        
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddl_localidades">Seleccionar localidad o cargar una desde guardar localidad</asp:RequiredFieldValidator>
                         
             </div>
             
