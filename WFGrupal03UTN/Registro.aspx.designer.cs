@@ -51,6 +51,15 @@ namespace WFGrupal03UTN
         protected global::System.Web.UI.WebControls.TextBox txt_Usuario;
 
         /// <summary>
+        /// Control rfv_Usuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_Usuario;
+
+        /// <summary>
         /// Control txt_Contra.
         /// </summary>
         /// <remarks>
@@ -184,5 +193,14 @@ namespace WFGrupal03UTN
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Inicio;
+
+        /// <summary>
+        /// Control lbl_Bienvenida.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Bienvenida;
     }
 }

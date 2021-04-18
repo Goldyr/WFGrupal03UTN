@@ -31,5 +31,10 @@ namespace WFGrupal03UTN
         {
             Response.Redirect("Inicio.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            lbl_Bienvenida.Text = "Bienvenido usuario " + txt_Usuario.Text;
+        }
     }
 }
