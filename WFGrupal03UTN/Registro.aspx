@@ -18,7 +18,7 @@
                 <asp:RequiredFieldValidator ID="rfv_localidad" runat="server" ControlToValidate="txt_Localidad" ValidationGroup="Grupo1" ForeColor="Red">Ingrese una localidad</asp:RequiredFieldValidator>                
             </div>
             <div class="centrar-boton">
-                <asp:Button ID="Button1" runat="server" Text="Guardar localidad" ValidationGroup="Grupo1" Width="149px" OnClick="btn_GuardarLocalidad_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Guardar localidad" ValidationGroup="Grupo1" Width="149px" OnClick="btn_GuardarLocalidad_Click" UseSubmitBehavior="False" />
             </div>
             <h2>Usuarios</h2>
             <!-- USUARIOS -->
@@ -54,7 +54,7 @@
              <!-- CODIGO POSTAL -->
              <div class="input-div">
                  <p>CP: </p>
-                  <asp:TextBox ID="txt_CP" runat="server" Width="136px"></asp:TextBox>
+                  <asp:TextBox ID="txt_CP" runat="server" Width="136px" MaxLength="4"></asp:TextBox>
                  <asp:RangeValidator ID="rv_Cp" runat="server" ControlToValidate="txt_CP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ForeColor="Red">Ingresar CP de 4 digitos</asp:RangeValidator>
                  <asp:RequiredFieldValidator ID="rfv_CP" runat="server" ControlToValidate="txt_CP" ForeColor="Red">Ingresar un codigo postal</asp:RequiredFieldValidator>
              </div>
